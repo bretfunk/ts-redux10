@@ -1,5 +1,5 @@
 import { defaultState } from "../State";
-import { IDefaultState } from "../types";
+import { IState } from "../types";
 
 export const KEYS = {
   ADD_TODO: "ADD_TODO",
@@ -32,10 +32,7 @@ export const addTodo = (e: any) => {
   };
 };
 
-export const rootReducer = (
-  state: IDefaultState = defaultState,
-  action: any
-) => {
+export const rootReducer = (state: IState = defaultState, action: any) => {
   switch (action.type) {
     case KEYS.DELETE_ITEM: {
       const itemToDelete: string = action.payload;

@@ -1,6 +1,6 @@
-import { IDefaultState } from "./types";
+import { IState } from "./types";
 
-export const defaultState: IDefaultState = {
+export const defaultState: IState = {
   item: "",
   items: []
 };

@@ -1,4 +1,4 @@
-export interface IDefaultState {
+export interface IState {
   item: string;
   items: string[];
 }

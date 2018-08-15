@@ -1,7 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { addTodo, updateItem } from "../ducks/todo";
-import { IDefaultState } from "../types";
+import { IState } from "../types";
 
 export interface IReduxProps {
   item: string;
@@ -34,7 +34,7 @@ class Input extends React.Component<IReduxProps & IDispatchProps> {
 }
 
 export default connect(
-  (state: IDefaultState): IReduxProps => ({
+  (state: IState): IReduxProps => ({
     item: state.item
   }),
   { addTodo, updateItem }
